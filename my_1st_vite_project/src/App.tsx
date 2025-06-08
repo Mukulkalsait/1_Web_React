@@ -1,12 +1,28 @@
-// import MessageNew from './Message';
-import ListGroup from './components/ListGroup';
+import { useState, useEffect } from 'react';
+import './App.css';
 
-function App() {
+const Btn = () => {
+  const [hasLike, setHasLike] = useState<boolean>(false);
+
   return (
-    <div>
-      <ListGroup />
-    </div>
+    <>
+      {' '}
+      <button className="btnSuccss" onClick={() => setHasLike(!hasLike)}>
+        hasliked?'Liked!!':'Please Like'
+      </button>
+    </>
   );
-}
+};
 
-export default App;
+const Card = ({ title, desc, link }) => {
+  return (
+    <>
+      <div className="card-x" onClick={() => setCount((prevState) => prevState + 1)}>
+        <h2>🔯 {title}</h2>
+        <p>🏽 {desc}</p>
+        <p>🔗 {link}</p>
+        <Btn></Btn>
+      </div>
+    </>
+  );
+};
