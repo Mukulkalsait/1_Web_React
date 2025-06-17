@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
-import Search from './components/Search/Search.tsx';
+import React, { useState } from "react";
+import Search from "./components/Search/Search.tsx";
 
 const App = () => {
   // B: useState:
-  const [searchTerm, setSearchTerm] = useState('Get over 10M resualts from over 200+ portals right here...');
+  const [searchTerm, setSearchTerm] = useState(
+    "Get over 10M resualts from over 200+ portals right here...",
+  );
 
   return (
     <>
@@ -13,11 +15,15 @@ const App = () => {
           <header>
             <img src="./hero-img.png" alt="Hero Banner"></img>
             <h1>
-              Find <span className="text-gradient">Most Watched Movies</span> At Your Finguretips !
+              Find <span className="text-gradient">Most Watched Movies</span> At
+              Your Finguretips !
             </h1>
           </header>
 
-          <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}></Search>
+          <Search
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+          ></Search>
         </div>
       </main>
     </>
